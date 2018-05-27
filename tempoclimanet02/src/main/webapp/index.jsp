@@ -21,8 +21,8 @@
     </head>
 
     <body>
+        <div id="idMenu">&equiv;</div>
         <div id="idHeader">
-            <div id="idMenu">&equiv;</div>
             <div id="idNomeSite">TempoClimaNET</div>
             <div id="idDELPOLI">EEL418 / DEL / POLI / UFRJ</div>
             <div id="idlista">&nbsp;</div>

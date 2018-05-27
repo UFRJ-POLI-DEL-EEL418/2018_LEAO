@@ -3,47 +3,49 @@
 * {
     box-sizing:border-box;
 }
-body{
+body, html{
     margin:0;
     padding:0;
     overflow-x:hidden;
     overflow-y:auto;
     font-family:"Lato", sans-serif; 
     font-size:14pt;
+    height:100%;
+
     background-image: url("../images/fundo33.png");  
-/*    background-color: azure; */
     background-size:cover; 
     background-repeat:no-repeat;
-    background-position:center center; 
 }
 
 #idHeader{
     position:fixed;
-    top:0;
-    vertical-align: top;
-    padding-top:0px;
+    top:0; 
     height:45px;
     width:100%;
     background-color:#1C648D;
 }
 #idMenu{
-    margin-top:-4px;
+    position:absolute;
+    z-index:100;
+    top:-4px;
+    left:10px;
     font-size:2.4em;
     width:30px;
     text-align:center;
-    float:left;
     color:white;
 }
 #idNomeSite{
+    position:relative;
+    left:43px;
     padding-top:10px;
-    width:200px;
+    width:160px;
     text-align:center;
     float:left;
     color:white;
 }
 #idDELPOLI{
     padding-top:10px;
-    width:300px;
+    width:260px;
     text-align:center;
     float:right;
     color:white;
@@ -53,4 +55,37 @@ body{
     top:45px;;
     height:3px;
     background-color:white;
+}
+@media screen and  (max-width:470px){
+#idHeader{
+    position:fixed;
+    top:0; 
+    height:77px;
+    width:100%;
+    background-color:#1C648D;
+}
+#idNomeSite{
+    position:static;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:white;
+}
+#idDELPOLI{
+    position:static;
+    width:100%;
+    height:40px;
+    padding-top:15px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:white;
+}
+#idlista{
+    position:relative;
+    top:77px;;
+    height:3px;
+    background-color:white;
+}
 }
