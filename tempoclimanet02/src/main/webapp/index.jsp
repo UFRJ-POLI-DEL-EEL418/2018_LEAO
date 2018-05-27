@@ -27,6 +27,212 @@
             <div id="idDELPOLI">EEL418 / DEL / POLI / UFRJ</div>
             <div id="idlista">&nbsp;</div>
         </div>
-        
+
+        <div id="idDivLocal">
+            <span class="classTexto1" style="font-size:1.50em;font-weight:bold;color:yellow;">
+                AAAAA
+            </span>
+        </div>
+
+        <div id="idDivDatahora">
+            Local: 
+            <div class="local">Brasil</div>
+            <div class="local">Rio de Janeiro, RJ - Posto 9</div>
+            <br>
+            Data-hora: 
+            <input type="text" size="26" name="datahoraref" 
+                   value="${datahoraref}"
+                   class="local"
+                   style="font-size:1.05em;text-align:center;"/>
+            <input type="submit" value="BUSCAR" name="funcao" 
+                   style="font-size:1.05em;text-align:center;"/>
+            <br>
+            <span class="classTexto1" style="font-size:0.80em">
+                (referência: dd/MM/aaaa hh:mm:ss)
+            </span>
+        </div>
+
+        <br>
+        <div id="idDivMedAutom" class="shadowBorder">
+            MEDIDAS AUTOMÁTICAS<br>
+            <span class="classTexto2" style="font-size:0.80em;">
+                (mais recente, igual ou anterior à referência)
+            </span>
+            <br>
+            <div style="width:100%;
+                 margin-left:auto;
+                 margin-right:auto;
+                 text-align:center;">
+                <br>
+                Data-hora:
+                <input style="width:245px;font-size:1.1em;border:none;text-align:center;" 
+                       name="datahora" 
+                       value="${RESULTADOS.datahora}"/>
+                <br>
+                <input type="submit" style="font-size:0.9em;" name="funcao" value="<<Med. anterior"/>
+                <input type="submit" style="font-size:0.9em;" name="funcao" value="Próxima med.>>"/>
+            </div>
+            <br>
+            <div style="width:100%;
+                 margin-left:auto;
+                 margin-right:auto;
+                 text-align:center;
+                 font-size:0.9em;">    
+                <table>
+                    <tr>
+                        <td style="width:295px;text-align:right;">
+                            Temperatura:
+                        </td>
+                        <td style="width:80px;text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                name="temperatura" 
+                                value="${RESULTADOS.temperatura}"/>
+                        </td>
+                        <td style="width:60px;text-align:left;">
+                            C
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Umidade: 
+                        </td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                name="umidade" 
+                                value="${RESULTADOS.umidade}"/>
+                        </td>
+                        <td style="text-align:left;">
+                            %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Ponto de orvalho: 
+                        </td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                name="orvalho" 
+                                value="${RESULTADOS.orvalho}"/>
+                        </td>
+                        <td style="text-align:left;">
+                            C
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Pressão atmosférica: 
+                        </td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                name="pressao" 
+                                value="${RESULTADOS.pressao}"/>
+                        </td>
+                        <td style="text-align:left;">
+                            hPa
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Taxa de precipitação: 
+                        </td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                name="taxaprecipitacao" 
+                                value="${RESULTADOS.taxaprecipitacao}"/>
+                        </td>
+                        <td style="text-align:left;">
+                            mm/h
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Precipitação (24h): 
+                        </td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                name="precipitacaoacum" 
+                                value="${RESULTADOS.precipitacaoacum}"/>
+                        </td>
+                        <td style="text-align:left;">
+                            mm
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Velocidade do Vento: 
+                        </td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                size="6" 
+                                name="velvento" 
+                                value="${RESULTADOS.velvento}"/>
+                        </td>
+                        <td style="text-align:left;">
+                            km/h
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Direção do vento:</td>
+                        <td style="text-align:right;">
+                            <input 
+                                class="classTexto2" 
+                                size="6" 
+                                name="dirvento" 
+                                value="${RESULTADOS.dirvento}"/>
+                        </td>
+                        <td style="text-align:left;">
+
+                        </td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        FIM
+
+
+
     </body>
 </html>
