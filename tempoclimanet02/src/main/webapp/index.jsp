@@ -61,8 +61,8 @@
                 <div id="divDatahoraMedAut">
                     Data-hora:
                     <input id="datahoraMedAut" value="01/01/1970 00:00:00"/>
-                    <input type="submit" style="font-size:0.9em;" value="<<Anterior"/>
-                    <input type="submit" style="font-size:0.9em;" value="Próxima>>"/>
+                    <input type="button" style="font-size:0.9em;" value="<<Anterior"/>
+                    <input type="button" style="font-size:0.9em;" value="Próxima>>"/>
                 </div>
                 <div id="divTabelaMedAut">    
                     <table>
