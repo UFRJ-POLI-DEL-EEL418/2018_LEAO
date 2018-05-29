@@ -2,11 +2,13 @@
 <%@page import="java.net.URL"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <% URL contexto = new URL(
             "http",
             request.getServerName(),
             request.getServerPort(),
             request.getContextPath());%>
+            
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,11 +30,8 @@
             <div id="idlista">&nbsp;</div>
         </div>
 
-        <div id="idDivLocal">
-            <span class="classTexto1" 
-                  style="font-size:1.0em;font-weight:bold;color:yellow;">
-                ESPAÇO PARA MENSAGENS DO SISTEMA, ERROS, ETC...
-            </span>
+        <div id="divMensagens">
+            ESPAÇO PARA MENSAGENS DO SISTEMA, ERROS, ETC...
         </div>
 
         <div id="idDivDatahora">
@@ -41,12 +40,11 @@
             <div class="local">Rio de Janeiro, RJ - Posto 9</div>
             <br>
             Data-hora: 
-            <input type="text" size="26" name="datahoraref" 
-                   value=""
-                   class="local"
-                   style="font-size:1.05em;text-align:center;"/>
-            <input type="submit" value="BUSCAR" name="funcao" 
-                   style="font-size:1.05em;text-align:center;"/>
+            <input id="idDatahora"
+                   type="text" 
+                   value="01/01/1970 00:00:00"
+                   readonly/>
+            <input id="botBUSCAR" type="submit" value="BUSCAR"/>
             <br>
             <span class="classTexto1" style="font-size:0.80em">
                 (referência: dd/MM/aaaa hh:mm:ss)
@@ -60,38 +58,21 @@
                 <span class="classTexto2" style="font-size:0.80em;">
                     (mais recente, igual ou anterior à referência)
                 </span>
-                <div style="width:100%;
-                     margin-left:auto;
-                     margin-right:auto;
-                     text-align:center;">
+                <div id="divDatahoraMedAut">
                     Data-hora:
-                    <input style="width:245px;font-size:1.1em;border:none;text-align:center;" 
-                           name="datahora" 
-                           value=""/>
-                    <input type="submit" 
-                           style="font-size:0.9em;" name="funcao" value="<<Med. anterior"/>
-                    <input type="submit" 
-                           style="font-size:0.9em;" name="funcao" value="Próxima med.>>"/>
+                    <input id="datahoraMedAut" value="01/01/1970 00:00:00"/>
+                    <input type="submit" style="font-size:0.9em;" value="<<Anterior"/>
+                    <input type="submit" style="font-size:0.9em;" value="Próxima>>"/>
                 </div>
-                <div style="width:100%;
-                     margin-left:auto;
-                     margin-right:auto;
-                     text-align:center;
-                     font-size:0.9em;">    
+                <div id="divTabelaMedAut">    
                     <table>
-                        <tr>
-                            <td style="width:295px;text-align:right;">
-                                Temperatura:
+                        <tr class="fundoAzul">
+                            <td> Temperatura:</td>
+                            <td><input id="temperaturamedaut"
+                                       class="classTexto2 fundoAzul" 
+                                       value=""/>
                             </td>
-                            <td style="width:80px;text-align:right;">
-                                <input 
-                                    class="classTexto2" 
-                                    name="temperatura" 
-                                    value=""/>
-                            </td>
-                            <td style="width:60px;text-align:left;">
-                                C
-                            </td>
+                            <td> C</td>
                         </tr>
                         <tr>
                             <td style="text-align:right;">
@@ -107,13 +88,13 @@
                                 %
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="fundoAzul">
                             <td style="text-align:right;">
                                 Ponto de orvalho: 
                             </td>
                             <td style="text-align:right;">
-                                <input 
-                                    class="classTexto2" 
+                                <input
+                                    class="classTexto2 fundoAzul" 
                                     name="orvalho" 
                                     value=""/>
                             </td>
@@ -135,13 +116,13 @@
                                 hPa
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="fundoAzul">
                             <td style="text-align:right;">
                                 Taxa de precipitação: 
                             </td>
                             <td style="text-align:right;">
                                 <input 
-                                    class="classTexto2" 
+                                    class="classTexto2 fundoAzul" 
                                     name="taxaprecipitacao" 
                                     value=""/>
                             </td>
@@ -163,13 +144,13 @@
                                 mm
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="fundoAzul">
                             <td style="text-align:right;">
                                 Velocidade do Vento: 
                             </td>
                             <td style="text-align:right;">
-                                <input 
-                                    class="classTexto2" 
+                                <input
+                                    class="classTexto2 fundoAzul" 
                                     size="6" 
                                     name="velvento" 
                                     value=""/>
@@ -201,32 +182,27 @@
                 <span class="classTexto2" style="font-size:0.80em">
                     (mais recente, igual ou anterior à referência)
                 </span>
-                <div style="width:100%;
-                     margin-left:auto;
-                     margin-right:auto;
-                     text-align:center;">
+                <div id="divDatahoraObs">
                     Data-hora: 
-                    <input style="width:245px;font-size:1.1em;border:none;text-align:center;" 
-                           name="datahoraobservacao" 
-                           value=""/>
-                    <input type="submit" name="funcao" 
-                           style="font-size:0.9em;" value="<<Obs. anterior"/>
-                    <input type="submit" name="funcao" 
-                           style="font-size:0.9em;" value="Próxima obs.>>"/>
+                    <input id="datahoraObs" value="01/01/1970 00:00:00"/>
+                    <input id="ObsAnterior"
+                           type="button" 
+                           style="font-size:0.9em;" value="<<Anterior"/>
+                    <input id="ObsPosterior"
+                           type="button" 
+                           style="font-size:0.9em;" value="Próxima>>"/>
                 </div>
-                <table style="font-size:0.9em;">
-                    <tr>
-                        <td style="width:155px;text-align:right;">
+                
+                <table>
+                    <tr class="fundoAzul">
+                        <td style="width:150px;text-align:right;">
                             Altura das ondas:
                         </td>
-                        <td style="width:80px;text-align:right;">
-                            <input 
-                                class="classTexto2" 
-                                name="alturaondas" 
-                                style="width:80px;"
-                                value=""/>
+                        <td id="alturaondas" class="classTexto2" 
+                            style="width:80px;text-align:left;">
+                            
                         </td>
-                        <td style="width:50px;text-align:left;">
+                        <td style="width:60px;text-align:left;">
                             m
                         </td>
                     </tr>
@@ -245,28 +221,28 @@
                             C
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="fundoAzul">
                         <td style="text-align:right;">
                             Bandeira:
                         </td>
                         <td colspan="2" 
                             style="text-align:center;font-size:1.0em;">
-                            <input 
-                                class="classTexto3" 
+                            <input
+                                style="text-align:center;
+                                    color:forestgreen;
+                                    font-weight:bold;"
+                                class="classTexto3 fundoAzul" 
                                 name="bandeira" 
                                 value="VERDE"
-                                style="width:130px;
-                                text-align:center;
-                                color:forestgreen;
-                                font-weight:bold;"/>
+                                />
                         </td>
                     </tr>
                 </table>                    
                 <br>
             </div>
             
-            
             <div style="width:310px;height:100px;clear:left;">&nbsp;</div>
+            
         </div>
-</body>
+    </body>
 </html>
