@@ -44,7 +44,7 @@
                    type="text" 
                    value="01/01/1970 00:00:00"
                    readonly/>
-            <input id="botBUSCAR" type="submit" value="BUSCAR"/>
+            <input id="botBUSCAR" type="button" value="BUSCAR"/>
             <br>
             <span class="classTexto1" style="font-size:0.80em">
                 (referência: dd/MM/aaaa hh:mm:ss)
@@ -240,9 +240,9 @@
                 </table>                    
                 <br>
             </div>
-            
-            <div style="width:310px;height:100px;clear:left;">&nbsp;</div>
-            
         </div>
+            
+        <div style="width:310px;height:100px;clear:left;">&nbsp;</div>
+            
     </body>
 </html>
