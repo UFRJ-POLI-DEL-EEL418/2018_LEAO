@@ -79,15 +79,38 @@ body, html{
     border:none;
 }
 #idDatahora{
+    position:relative;
     font-weight:bold;
     text-align:center;
     border:1px solid black;
     background-color:white;
     color:black;
     width:300px;
+    height:30px;
+    line-height:26px;
     margin-left:auto;
     margin-right:auto;
     font-size:1.0em;
+}
+#idDatahora2{
+    font-weight:bold;
+    text-align:center;
+    border:none;
+    background-color:white;
+    color:black;
+    width:300px;
+    height:30px;
+    line-height:26px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.0em;
+}
+div.ui-datepicker{
+    position:fixed !important;
+    top:150px !important;
+    width:300px;
+    font-size:16px;
+    z-index:999;
 }
 #botBUSCAR{
     font-size:1.05em;
@@ -152,14 +175,20 @@ body, html{
 }
 #datahoraMedAut{
     width:245px;
+    margin-left:auto;
+    margin-right:auto;
     font-size:1.0em;
+    color:black;
     font-weight:bold;
     border:none;
     text-align:center;
 }
 #datahoraObs{
     width:245px;
+    margin-left:auto;
+    margin-right:auto;
     font-size:1.0em;
+    color:black;
     font-weight:bold;
     border:none;
     text-align:center;
@@ -172,6 +201,7 @@ body, html{
     width:80px;
 }
 .classTexto2{
+    text-align:center;
     font-size:1.1em;
     color:black;
     font-weight:normal;
@@ -209,6 +239,13 @@ body, html{
 }
 .fundoAzul{
     background-color:#cceeff;
+}
+.espacamento01{
+    width:0px;
+    height:0px;
+}
+.linksJanelas{
+    display:none;
 }
 
 
@@ -262,6 +299,23 @@ body, html{
         margin-left:auto;
         margin-right:auto;
     }
-
+    .espacamento01{
+        width:310px;
+        height:65px;
+        float:left;
+    }
+    .linksJanelas{
+        display:block;
+    }
+    div.ui-datepicker{
+        position:absolute !important;
+        width:100%;
+        top:150px !important;   
+        left:auto !important;   
+        right:auto !important;   
+        font-size:16px;
+        z-index:999;
+    }
+    
 }
 
