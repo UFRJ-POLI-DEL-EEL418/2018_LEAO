@@ -36,12 +36,7 @@ function buscarObsAnterior(){
 	.then(function(xhr){atualizarObservacoes('ANTERIORES',xhr.response);})
 	.catch(function(xhr){
 	    document.getElementById("divMensagens").innerHTML = 
-				    "NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";
-	    console.log('Resposta:'+JSON.stringify(xhr.response));
-	    console.log('Status:'+JSON.stringify(xhr.status));
-	    console.log('ReadyState:'+JSON.stringify(xhr.readyState));
-	    console.log('Erro:'+JSON.stringify(xhr.err));
-	});
+				"NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";});
 }
 //------------------------------------------------------------------------------
 function buscarObsProxima(){
@@ -51,12 +46,7 @@ function buscarObsProxima(){
 	.then(function(xhr){atualizarObservacoes('POSTERIORES',xhr.response);})
 	.catch(function(xhr){
 	    document.getElementById("divMensagens").innerHTML = 
-				    "NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";
-	    console.log('Resposta:'+JSON.stringify(xhr.response));
-	    console.log('Status:'+JSON.stringify(xhr.status));
-	    console.log('ReadyState:'+JSON.stringify(xhr.readyState));
-	    console.log('Erro:'+JSON.stringify(xhr.err));
-	});
+				"NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";});
 }
 //------------------------------------------------------------------------------
 function atualizarObservacoes(mensagem,resultados){
@@ -77,49 +67,31 @@ function atualizarObservacoes(mensagem,resultados){
 function buscarMedAutAnterior(){
     var data = {};
     data.datahora = document.getElementById('datahoraMedAut').innerHTML;
-//alert(JSON.stringify(data));    
     fazerPedidoPostAJAXcomPromise(data,'buscarMedAutAnterior')
 	.then(function(xhr){atualizarMedidasAutomaticas('ANTERIORES',xhr.response);})
 	.catch(function(xhr){
 	    document.getElementById("divMensagens").innerHTML = 
-				    "NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";
-	    console.log('Resposta:'+JSON.stringify(xhr.response));
-	    console.log('Status:'+JSON.stringify(xhr.status));
-	    console.log('ReadyState:'+JSON.stringify(xhr.readyState));
-	    console.log('Erro:'+JSON.stringify(xhr.err));
-	});
+				"NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";});
 }
 //------------------------------------------------------------------------------
 function buscarMedAutProxima(){
     var data = {};
     data.datahora = document.getElementById('datahoraMedAut').innerHTML;
-//alert(JSON.stringify(data));    
     fazerPedidoPostAJAXcomPromise(data,'buscarMedAutProxima')
 	.then(function(xhr){atualizarMedidasAutomaticas('POSTERIORES',xhr.response);})
 	.catch(function(xhr){
 	    document.getElementById("divMensagens").innerHTML = 
-				    "NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";
-	    console.log('Resposta:'+JSON.stringify(xhr.response));
-	    console.log('Status:'+JSON.stringify(xhr.status));
-	    console.log('ReadyState:'+JSON.stringify(xhr.readyState));
-	    console.log('Erro:'+JSON.stringify(xhr.err));
-	});
+				"NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";});
 }
 //------------------------------------------------------------------------------
 function buscarTodosResultadosPorDatahora(){
     var data = {};
     data.datahora = document.getElementById('idDatahora2').value;
-//alert(JSON.stringify(data));    
     fazerPedidoPostAJAXcomPromise(data,'buscarTodosResultadosPorDatahora')
 	.then(function(xhr){atualizarDadosDaPagina(xhr.response);})
 	.catch(function(xhr){
 	    document.getElementById("divMensagens").innerHTML = 
-				    "NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";
-	    console.log('Resposta:'+JSON.stringify(xhr.response));
-	    console.log('Status:'+JSON.stringify(xhr.status));
-	    console.log('ReadyState:'+JSON.stringify(xhr.readyState));
-	    console.log('Erro:'+JSON.stringify(xhr.err));
-	});
+				"NÃO CONSEGUIU RECEBER DADOS DO SERVIDOR...";});
 }
 //------------------------------------------------------------------------------
 function atualizarMedidasAutomaticas(mensagem,resultados){
@@ -143,10 +115,7 @@ function atualizarMedidasAutomaticas(mensagem,resultados){
 }
 //------------------------------------------------------------------------------
 function atualizarDadosDaPagina(resultados){
-//alert(JSON.stringify(xhr.response));
-//    document.getElementById("idDatahora").innerHTML = resultados.idDatahora;
-	document.getElementById("divMensagens").innerHTML = "";
-
+    document.getElementById("divMensagens").innerHTML = "";
     document.getElementById("datahoraMedAut").innerHTML = resultados.datahoraMedAut;
     document.getElementById("temperaturamedaut").innerHTML = resultados.temperatura;
     document.getElementById("umidade").innerHTML = resultados.umidade;

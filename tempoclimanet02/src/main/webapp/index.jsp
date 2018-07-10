@@ -24,12 +24,12 @@
         <link rel="stylesheet" type="text/css" 
               href="<%= contexto%>/css/jquery-ui-timepicker-addon.css"/>
 
-        <script type="text/javascript"
-        src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <!--script type="text/javascript"
+        src="https://code.jquery.com/jquery-3.3.1.min.js" ></script -->
         <!-- integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
                 crossorigin="anonymous"></script -->
-        <!-- script type="text/javascript" 
-                src="<%= contexto%>/js/jquery-3.3.1.js"></script -->
+        <script type="text/javascript" 
+                src="<%= contexto%>/js/jquery-3.3.1.js"></script>
         <script type="text/javascript" 
         src="<%= contexto%>/js/jquery-ui.min.js"></script>
         <script type="text/javascript" 
@@ -279,7 +279,7 @@
                 <br>
                 <br>
                 <div style="width:300px;height:170px;overflow:hidden;">
-                    <iframe 
+                    <!-- iframe 
                         style="margin-top:-27px;scrolling:no"
                         width="300" 
                         height="230" 
@@ -287,12 +287,12 @@
                         frameborder="0" 
                         allowfullscreen>
 
-                    </iframe>   
+                    </iframe -->   
                     <!-- src="https://www.youtube.com/embed/q630OUJVk8U/300x225?rel=0&amp;controls=0&amp;showinfo=0" -->
+                    <video width="300" height="225" controls>
+                        <source src="images/PrevisaoSudeste.mp4" type="video/mp4">
+                    </video> 
                 </div>
-                <!-- video width="300" height="225" controls>
-                    <source src="images/PrevisaoSudeste.mp4" type="video/mp4">
-                </video --> 
                 </div>
             </div>
 
