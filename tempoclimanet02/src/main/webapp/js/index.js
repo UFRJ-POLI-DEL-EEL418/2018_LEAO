@@ -2,6 +2,53 @@
 
 window.onload = main;
 function main(){
+    if($(window).width()>=640){
+	$('#idDivDatahora').show();
+	$('#idDivMedAutom').show();
+	$('#idDivObserv').show();
+    }else{
+	$('#idDivDatahora').show();
+	$('#idDivMedAutom').hide();
+	$('#idDivObserv').hide();
+    }
+
+    $( window ).resize(function() {
+	console.log($(window).width());
+	if($(window).width()>=640){
+	    $('#idDivDatahora').show();
+	    $('#idDivMedAutom').show();
+	    $('#idDivObserv').show();
+	}else{
+	    $('#idDivDatahora').show();
+	    $('#idDivMedAutom').hide();
+	    $('#idDivObserv').hide();
+	}
+    });
+    
+    document.getElementById("medidasAutom").addEventListener(
+	    'click',function(){
+			$('#idDivDatahora').hide();
+			$('#idDivMedAutom').show();
+			$('#idDivObserv').hide();
+	    });
+    document.getElementById("dadosObs").addEventListener(
+	    'click',function(){
+			$('#idDivDatahora').hide();
+			$('#idDivMedAutom').hide();
+			$('#idDivObserv').show();
+	    });
+    document.getElementById("topo1").addEventListener(
+	    'click',function(){
+			$('#idDivDatahora').show();
+			$('#idDivMedAutom').hide();
+			$('#idDivObserv').hide();
+	    });
+    document.getElementById("topo2").addEventListener(
+	    'click',function(){
+			$('#idDivDatahora').show();
+			$('#idDivMedAutom').hide();
+			$('#idDivObserv').hide();
+	    });
     
     $('#idDatahora2').datetimepicker({
 	    dateFormat: "dd/mm/yy", 

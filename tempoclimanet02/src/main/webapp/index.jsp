@@ -44,14 +44,16 @@
     <body>
         <a name="TOPO">&nbsp;</a>
         <div id="idHeader">
-            <div id="idNomeSite">
-                TempoClimaNET v2.0.1<br>
+            <div id="headerTop">
+                <div id="idNomeSite">
+                    TempoClimaNET v2.0.1<br>
+                </div>
             </div>
-            <div id="idDELPOLI"><i>jorge.leao@ufrj.br</i></div>
             <div id="idlista">&nbsp;</div>
-        </div>
-
-        <div id="divMensagens">
+            
+            <div id="divMensagens">
+                &nbsp;
+            </div>
 
         </div>
 
@@ -73,15 +75,16 @@
             </span>
             <br>
             <input id="botBUSCAR" type="button" value="BUSCAR"/>
+
             <div class="linksJanelas">
                 <br>
-                <a href="#MEDIDASAUTOMATICAS" 
+                <a href="#" id="medidasAutom"
                    style="text-decoration:azure;color:white;text-shadow:2px 2px 4px #000000;">
                     MEDIDAS AUTOMÁTICAS
                 </a>
                 <br>
                 <br>
-                <a href="#DADOSDEOBSERVADORES" 
+                <a href="#" id="dadosObs"
                    style="text-decoration:azure;color:white;text-shadow:2px 2px 4px #000000;">
                     DADOS DE OBSERVADORES
                 </a>
@@ -93,12 +96,13 @@
 
         <div id="enclosingDiv">
             <div class="espacamento01">
-                <a name="MEDIDASAUTOMATICAS">&nbsp;</a>
+                &nbsp;
             </div>
+            
             <div id="idDivMedAutom" class="shadowBorder" style="float:left;">
                 Medidas Automáticas
                 &nbsp;
-                <a href="#TOPO" style="color:#1C648D;text-shadow:1px 1px 1px #004477;">
+                <a href="#" id="topo1" style="color:#1C648D;text-shadow:1px 1px 1px #004477;">
                     Topo<img src="./images/triangulo.ico" width="20" alt=""/>
                 </a>
                 <br>
@@ -209,12 +213,9 @@
                 </div>
             </div>
 
-            <div class="espacamento01">
-                <a name="DADOSDEOBSERVADORES">&nbsp;</a>
-            </div>
             <div id="idDivObserv" class="shadowBorder" style="float:left;">
                 Dados de Observadores 
-                <a href="#TOPO" style="color:#1C648D;text-shadow:1px 1px 1px #004477;">
+                <a href="#" id="topo2" style="color:#1C648D;text-shadow:1px 1px 1px #004477;">
                     Topo<img src="./images/triangulo.ico" width="20" alt=""/>
                 </a>
                 <br>
@@ -276,8 +277,6 @@
                             </td>
                         </tr>
                     </table> 
-                <br>
-                <br>
                 <div style="width:300px;height:170px;overflow:hidden;">
                     <!-- iframe 
                         style="margin-top:-27px;scrolling:no"
@@ -289,7 +288,7 @@
 
                     </iframe -->   
                     <!-- src="https://www.youtube.com/embed/q630OUJVk8U/300x225?rel=0&amp;controls=0&amp;showinfo=0" -->
-                    <video width="300" height="225" controls>
+                    <video width="300" height="200" controls>
                         <source src="images/PrevisaoSudeste.mp4" type="video/mp4">
                     </video> 
                 </div>
@@ -319,7 +318,6 @@
 
         </div>
 
-        <div style="width:310px;height:100px;clear:left;">&nbsp;</div>
 
     </body>
 </html>
